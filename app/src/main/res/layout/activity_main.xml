@@ -6,90 +6,97 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="24dp">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:gravity="top|center"
-            android:text="Losowanie kostek"
-            android:textSize="28sp"
-            android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="top|center"
+                android:text="Losowanie kostek"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Liczba kostek:"
-            android:textSize="18sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liczba kostek:"
+                android:textSize="18sp"/>
 
 
-        <EditText
-            android:id="@+id/editTextLiczbaKostek"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Podaj liczbe kostek"
-            android:inputType="number"/>
-        <Button
-            android:id="@+id/btnLosuj"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="LOSUJ"/>
+            <EditText
+                android:id="@+id/editTextLiczbaKostek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Podaj liczbe kostek"
+                android:text = "5"
+                android:inputType="number"/>
+            <Button
+                android:id="@+id/btnLosuj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="LOSUJ"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="Wylosowane kostki:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Wylosowane kostki:"/>
 
-        <GridLayout
-            android:id="@+id/gridKostki"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="1"
-            android:layout_gravity="center"
-            android:useDefaultMargins="true"
-            />
+            <GridLayout
+                android:id="@+id/gridKostki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="9"
+                android:layout_gravity="center"
+                android:useDefaultMargins="true"
+                />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="Wyniki:"/>
-        
-        <TextView
-            android:id="@+id/textViewWyniki"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Wyniki:"/>
 
-        <Button
-            android:id="@+id/btnMalejaco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="SORTUJ MALEJĄCO"/>
+            <TextView
+                android:id="@+id/textViewWyniki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textSize="20sp"/>
 
-        <Button
-            android:id="@+id/btnRosnaco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="SORTUJ ROSNĄCO"/>
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnMalejaco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SORTUJ MALEJĄCO"/>
+
+            <Button
+                android:id="@+id/btnRosnaco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="SORTUJ ROSNĄCO"/>
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
